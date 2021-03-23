@@ -30,8 +30,9 @@ Installation
 ```
 
 // LGPD CRUD resources (GET, POST, PATCH and DELETE already implemented)
-Route::resource('lgpdterm', Thiagoprz\Lgpd\Http\Controllers\LgdpTermController::class);
-Route::resource('lgpdtermitem', Thiagoprz\Lgpd\Http\Controllers\LgdpTermItemController::class);
+Route::resource('lgpdterm', 'Thiagoprz\Lgpd\Http\Controllers\LgpdTermController');
+Route::resource('lgpdtermitem', 'Thiagoprz\Lgpd\Http\Controllers\LgpdTermItemController');
+Route::resource('lgpduseracceptance', 'Thiagoprz\Lgpd\Http\Controllers\LgpdUserAcceptanceController');
 
 ```
 
