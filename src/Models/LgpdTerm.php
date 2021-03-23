@@ -92,6 +92,15 @@ class LgpdTerm extends Model
     ];
 
     /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'publishing_date' => 'datetime',
+    ];
+
+    /**
      * Boot
      */
     protected static function boot()
