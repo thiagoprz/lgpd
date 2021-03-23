@@ -4,7 +4,7 @@ LGPD Laravel Package
 Installation
 --
 
-`` composer install thiagoprz/lgpd ``
+`` composer require thiagoprz/lgpd ``
 
 * Add service provider (only if not using package auto discovery enabled) on config/app.php:
 
