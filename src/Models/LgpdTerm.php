@@ -2,6 +2,7 @@
 
 namespace Thiagoprz\Lgpd\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Thiagoprz\CrudTools\Models\ModelCrud;
 
@@ -119,5 +120,13 @@ class LgpdTerm extends Model
     public function lgpdTermItems()
     {
         return $this->hasMany(LgpdTermItem::class);
+    }
+
+    /**
+     * @return LgpdTerm
+     */
+    public static function activeTerm()
+    {
+        return self::where('publishing_date', '<=', Carbon::now())->orderBy('publising_date', 'DESC')->first();
     }
 }
