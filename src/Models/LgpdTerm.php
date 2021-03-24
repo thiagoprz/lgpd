@@ -127,6 +127,6 @@ class LgpdTerm extends Model
      */
     public static function activeTerm(): ?LgpdTerm
     {
-        return self::where('publishing_date', '<=', Carbon::now())->orderBy('publishing_date', 'DESC')->first();
+        return self::with('lgpdTermItems')->where('publishing_date', '<=', Carbon::now())->orderBy('publishing_date', 'DESC')->first();
     }
 }
