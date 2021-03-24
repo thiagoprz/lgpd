@@ -48,4 +48,12 @@ class LgpdTermController extends BaseController
         return 'lgpd::' . strtolower(end($model_name_arr));
     }
 
+    /**
+     * Returns the active term
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function active()
+    {
+        return response()->json(LgpdTerm::activeTerm());
+    }
 }

@@ -35,6 +35,9 @@ Route::resource('lgpdterm', 'Thiagoprz\Lgpd\Http\Controllers\LgpdTermController'
 Route::resource('lgpdtermitem', 'Thiagoprz\Lgpd\Http\Controllers\LgpdTermItemController');
 Route::resource('lgpduseracceptance', 'Thiagoprz\Lgpd\Http\Controllers\LgpdUserAcceptanceController');
 
+// LGPD Active Term
+Route::get('lgpd/active', 'Thiagoprz\Lgpd\Http\Controllers\LgpdTermController@active');
+
 ```
 
 * Publish CRUD views to implement forms and management of the Terms and acceptance items.
