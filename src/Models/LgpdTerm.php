@@ -123,9 +123,9 @@ class LgpdTerm extends Model
     }
 
     /**
-     * @return LgpdTerm
+     * @return LgpdTerm|null
      */
-    public static function activeTerm()
+    public static function activeTerm(): ?LgpdTerm
     {
         return self::where('publishing_date', '<=', Carbon::now())->orderBy('publishing_date', 'DESC')->first();
     }

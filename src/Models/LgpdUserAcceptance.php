@@ -85,9 +85,9 @@ class LgpdUserAcceptance extends Model
      * Check if a user has accepted a term
      * @param int $user_id
      * @param int $term_id
-     * @return LgpdUserAcceptance
+     * @return LgpdUserAcceptance|null
      */
-    public static function userAccepted(int $user_id,int $term_id): LgpdUserAcceptance
+    public static function userAccepted(int $user_id,int $term_id): ?LgpdUserAcceptance
     {
         return self::where('user_id', $user_id)
             ->where('lgpd_term_id', $term_id)
