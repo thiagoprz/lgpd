@@ -90,7 +90,7 @@ class LgpdUserAcceptance extends Model
     public static function userAccepted(int $user_id,int $term_id): LgpdUserAcceptance
     {
         return self::where('user_id', $user_id)
-            ->where('term_id', $term_id)
+            ->where('lgpd_term_id', $term_id)
             ->first();
     }
 }
