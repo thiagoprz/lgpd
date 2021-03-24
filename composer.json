@@ -1,6 +1,6 @@
 {
     "name": "thiagoprz/lgpd",
-    "description": "Implementação da LGPD ligada ao cadastro de usuários do Laravel",
+    "description": "LGPD support package for Laravel",
     "type": "library",
     "extra": {
         "laravel": {
